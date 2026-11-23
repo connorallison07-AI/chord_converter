@@ -37,8 +37,10 @@ python chord_converter.py
 
 **Input Rules**
 
-- Chords and keys must be all caps with 'm' for minors and only sharps (ex: A, Am, A# not Ab)
+- Chords and keys must be all caps with only sharps (ex: A, Am, A# not Ab, Amaj7, Aadd9, Adim)
 - Separate chords with a single space
+- Only major keys
+- No chords with added sharp notes or slash chords
 
 **Example**
 
@@ -52,15 +54,15 @@ Give the chords in all caps separated by spaces (sharps only): C Am F G
 
 **Limitations**
 
-- Chords beyond major and minor are not supported yet (ex: Cmaj7, A2, Bdim, Cadd9)
+- Slash chords and chords with added sharp notes are not yet supported (ex: Cadd#7, A7#2, D/F#, G/B)
 
 ## Roadmap
 
 Features you haven't built yet but plan to (pull these from your
 "Schedule" quadrant in the Eisenhower Matrix).
 
-- [ ] Complex Chords
-- [ ] Capo Fret Output
+- [x] Complex Chords
+- [x] Capo Fret Output
 - [ ] Guitar-friendly Key Recommendations
 
 ## Author
