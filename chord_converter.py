@@ -5,6 +5,7 @@ newkey = input("What key do you want the chords in? ")
 chords = input("Give the chords in all caps separated by spaces(sharps only): ").split()
 newchords = []
 steps = notes.index(newkey) - notes.index(key) #Finding the number of steps between each key, negative values will be handled later
+capo = (notes.index(key) - notes.index(newkey)) % 12 #Calculating the fret a capo needs to be placed in order to stay in the original key
 for chord in chords:
     if 'm' in chord: #Checking if chord is minor
         if steps >= 0: #If new key is further in notes list than key
@@ -30,3 +31,4 @@ for chord in chords:
                 newchords.append(notes[notes.index(chord) + steps + len(notes)])
 print(chords)
 print(newchords)
+print(f'Note: Capo {capo} to stay in {key}.') #A note on how to not change keys by using a capo
